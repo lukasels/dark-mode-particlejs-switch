@@ -47,3 +47,20 @@ function resetTheme() {
     localStorage.removeItem('darkSwitch');
   }
 }
+
+function check_particles(){
+    Dark_theme = "#fff"
+    Light_theme = "#000"
+    if (localStorage.getItem('darkSwitch') === 'dark') {
+        $.each(pJSDom[0].pJS.particles.array, function(i){
+            pJSDom[0].pJS.particles.array[i].color.value = Dark_theme;
+            pJSDom[0].pJS.particles.array[i].color.rgb = hexToRgb(Dark_theme);
+            pJSDom[0].pJS.particles.line_linked.color_rgb_line = hexToRgb(Dark_theme);
+        });}
+    else {
+        $.each(pJSDom[0].pJS.particles.array, function(i){
+            pJSDom[0].pJS.particles.array[i].color.value = Light_theme;
+            pJSDom[0].pJS.particles.array[i].color.rgb = hexToRgb(Light_theme);
+            pJSDom[0].pJS.particles.line_linked.color_rgb_line = hexToRgb(Light_theme);
+        });}
+}
