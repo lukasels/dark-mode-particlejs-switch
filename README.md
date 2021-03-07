@@ -1,1 +1,1 @@
-# dark-mode-particlejs-switch
+# Dark-mode-particlejs-switch
